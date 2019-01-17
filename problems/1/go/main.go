@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func addUpTo(list []int, k int) bool {
+func sumOfTwoBrute(list []int, k int) bool {
 
     for i, va := range list {
         n := list
@@ -19,14 +19,28 @@ func addUpTo(list []int, k int) bool {
 }
 
 
+func sumOfTwo(list []int, k int) bool {
+
+    r := make(map[int]bool)
+
+    for _, v := range list {
+
+        sub := k - v
+        if r[sub] {
+            return true
+        }
+
+        r[v] = true
+    }
+
+    return false
+}
+
+
 func main() {
 
     list := []int{10, 15, 3, 7}
     k := 13
 
-    if addUpTo(list, k) {
-        fmt.Println("True")
-    } else {
-        fmt.Println("False")
-    }
+    fmt.Println(sumOfTwo(list, k))
 }

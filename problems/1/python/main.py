@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 
-
-def add_up_to(list_, k):
-    for i in range(0, len(list_)):
-        n = list_[:]
+def sum_of_two_brute(arr, k):
+    for i in range(0, len(arr)):
+        n = arr[:]
         n.pop(i)
-        value = list_[i]
+        value = arr[i]
 
         for j in n:
             if j + value is k:
@@ -14,8 +13,21 @@ def add_up_to(list_, k):
     return False
 
 
+def sum_of_two(arr, k):
+    r = []
+
+    for v in arr:
+        sub = k - v
+        if sub in r:
+            return True
+
+        r.append(v)
+
+    return False
+
+
 L = [10, 15, 3, 7]
 K = 25
 
 
-print(add_up_to(L, K))
+print(sum_of_two(L, K))
