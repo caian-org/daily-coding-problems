@@ -9,7 +9,6 @@ std::vector<long> prod_of_all_brute(std::vector<long> arr)
     for(uint16_t i = 0; i < arr.size(); i++)
     {
         long x = 1;
-
         for(uint16_t j = 0; j < arr.size(); j++)
         {
             if(arr[i] == arr[j])
@@ -28,9 +27,7 @@ std::vector<long> prod_of_all_brute(std::vector<long> arr)
 std::vector<long> prod_of_all(std::vector<long> arr)
 {
     uint16_t q = arr.size();
-    std::vector<long> a (q);
-    std::vector<long> b (q);
-    std::vector<long> r (q);
+    std::vector<long> a (q), b (q), r (q);
 
     long p = 1;
     for(uint16_t i = 0; i < q; i++)
@@ -58,15 +55,12 @@ std::vector<long> prod_of_all(std::vector<long> arr)
 
 int main()
 {
-    std::vector<long> L {1, 2, 3, 4, 5};
-    std::vector<long> M;
+    std::vector<long> L {1, 2, 3, 4, 5}, M;
 
     M = prod_of_all_brute(L);
-
     for(uint16_t i = 0; i < L.size(); i++)
     {
         long v = M[i];
-
         std::cout << v << ' ';
     }
     std::cout << std::endl;
