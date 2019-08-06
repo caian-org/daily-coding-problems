@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 
-const prodOfAllBrute = (arr) =>
+function prodOfAllBrute(arr: number[]): number[]
 {
     const a = [];
 
-    for(let i = 0; i < arr.length; i++)
-    {
+    for(let i = 0; i < arr.length; i++) {
         let x = 1;
-        for(let j = 0; j < arr.length; j++)
-        {
-            if(arr[i] == arr[j])
+
+        for(let j = 0; j < arr.length; j++) {
+            if(arr[i] == arr[j]) {
                 continue;
+            }
 
             x *= arr[j];
         }
@@ -23,7 +23,7 @@ const prodOfAllBrute = (arr) =>
 }
 
 
-const prodOfAll = (arr) =>
+function prodOfAll(arr: number[]): number[]
 {
     const q = arr.length,
         a = new Array(q),
@@ -52,6 +52,5 @@ const prodOfAll = (arr) =>
 
 
 const L = [1, 2, 3, 4, 5];
-
 
 console.log(prodOfAll(L));
