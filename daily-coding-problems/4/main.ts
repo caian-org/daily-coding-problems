@@ -1,7 +1,4 @@
-#!/usr/bin/env node
-
-
-const minInt = (arr) =>
+function minInt(arr: number[]): number
 {
     arr = arr
         .map((x)    => { return x })
@@ -11,16 +8,17 @@ const minInt = (arr) =>
 
     for(let i = 0; i < arr.length; i++)
     {
-        if(i == (arr.length - 1))
+        if(i == (arr.length - 1)) {
             return (arr[i] + 1);
+        }
 
-        if(arr[i + 1] - arr[i] > 1)
+        if(arr[i + 1] - arr[i] > 1) {
             return (arr[i] + 1);
+        }
     }
 }
 
 
 const x = [3, 4, -1, 1];
-
 
 console.log(minInt(x));
