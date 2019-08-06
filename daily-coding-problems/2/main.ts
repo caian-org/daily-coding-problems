@@ -1,6 +1,3 @@
-#!/usr/bin/env node
-
-
 function prodOfAllBrute(arr: number[]): number[]
 {
     const a = [];
