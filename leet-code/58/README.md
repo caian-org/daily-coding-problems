@@ -8,7 +8,7 @@ If the last word does not exist, return 0.
 __Note:__ A word is defined as a character sequence consists of non-space
 characters only.
 
-__Example:__
+## Example:
 
 ```
 Input: "Hello World"
